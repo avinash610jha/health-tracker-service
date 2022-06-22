@@ -1,4 +1,4 @@
-package customer.health_tracker_service;
+package com.ajha.ht;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

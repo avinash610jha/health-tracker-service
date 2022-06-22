@@ -4,14 +4,14 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>customer</groupId>
-		<artifactId>health-tracker-service-parent</artifactId>
+		<groupId>com.ajha.ht</groupId>
+		<artifactId>health-tracker-srv-parent</artifactId>
 		<version>${revision}</version>
 	</parent>
 
-	<artifactId>health-tracker-service-integration-tests</artifactId>
+	<artifactId>health-tracker-srv-integration-tests</artifactId>
 
-	<name>health-tracker-service-integration-tests</name>
+	<name>health-tracker-srv-integration-tests</name>
 
 	<properties>
 		<surefire.skipTests>false</surefire.skipTests>
@@ -38,8 +38,8 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>customer</groupId>
-			<artifactId>health-tracker-service</artifactId>
+			<groupId>com.ajha.ht</groupId>
+			<artifactId>health-tracker-srv</artifactId>
 			<version>${revision}</version>
 			<exclusions>
 				<exclusion>
