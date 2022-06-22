@@ -2,15 +2,14 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<artifactId>health-tracker-service-parent</artifactId>
-		<groupId>customer</groupId>
+		<artifactId>health-tracker-srv-parent</artifactId>
+		<groupId>com.ajha.ht</groupId>
 		<version>${revision}</version>
 	</parent>
 
-	<artifactId>health-tracker-service</artifactId>
+	<artifactId>health-tracker-srv</artifactId>
 	<packaging>jar</packaging>
-
-	<name>health-tracker-service</name>
+	<name>health-tracker-srv</name>
 
 	<!-- ACTUAL DEPENDENCIES -->
 	<dependencies>
