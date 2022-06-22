@@ -1,9 +1,9 @@
-package customer.health_tracker_service.rest;
+package com.ajha.ht.rest;
 
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = "/UtilityService")
+@RequestMapping(path = "/HealthTrackerService/Utility")
 public class Utility {
 
     @GetMapping(path = "/testBASUrlOnEdge")
@@ -21,10 +21,5 @@ public class Utility {
         return "it's working well when hosted locally with user and password avi ";
 
     }
-
-
-
-    
-
     
 }

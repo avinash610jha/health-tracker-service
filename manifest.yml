@@ -9,7 +9,7 @@ applications:
 # -----------------------------------------------------------------------------------
 - name: health-tracker-service-srv
   random-route: true  # for development only
-  path: srv/target/health-tracker-service-exec.jar
+  path: srv/target/health-tracker-srv-exec.jar
   memory: 1G
   disk_quota: 512M
   env:
