@@ -1,4 +1,4 @@
-ID;name;since;stat
-1;Fever;28-MAR-2020;Recovered
-2;Cough;26-MAR-2020;Recovered
-3;Cold;27-MAR-2020;Recovered
+ID;userId;name;since;stat
+7670963c-49cc-4845-89e6-9e9f7f16264f;9670963c-49cc-4845-89e6-9e9f7f16264f;Fever;28-MAR-2020;Recovered
+5670963c-49cc-4845-89e6-9e9f7f16264f;9670963c-49cc-4845-89e6-9e9f7f16264f;Cough;26-MAR-2020;Recovered
+8670963c-49cc-4845-89e6-9e9f7f16264f;9670963c-49cc-4845-89e6-9e9f7f16264f;Cold;27-MAR-2020;Recovered
