@@ -1,26 +1,45 @@
-## Health tracker service
+## Health Tracker Service (deployed on BTP)
 
-It has three important branch 
-main - final code 
-basDeployment - the things i am trying on Bas, also has the progress detail on it
-localDeployment - the things that i am trying locally
+### Functional Background
+To create a service which helps track my personal health reports
 
-Idea of these two extra branch is to safe guard the code, as i am still learning bas-git and in case if i delete a code by mistake and also merge it to main, i should still have it in local deployment branch.
+### Technical Background
+Using this service: 
+1) Achieve CAP based multi-tenant BTP Application
+2) create non-cap APIs
+3) deployment on BTP
+4) Integration with static UI projects
 
-these two branch do not have much difference and has mainly impact on application yaml, so later on we will get rid of these two separate branch. maybe we can rename these branch as backup 1, backup 2 - local 
+### Working Model
+It has three important branch:
+1. main - productive code 
+2. backup/basDeployment - branch for trying out things on BAS, also has the progress detail on it
+3. backup/localDeployment - branch for trying out things locally
 
-Current Status
-1. I am stuck at connecting my front end code to backend code due to authorization issue.
-- tried bas local to local connection, using ui5 tooliing, however it is failing at authorisation. Bas cap template backend service enables spring security because of which it requires an authentication. infact calling any rest endoint non-odata, it requires basic authentication. This is causing issue in connecting  app locally, as can be seen below a basic authentication is passed.
-- i have overwritten the security by providing my user and password but unable to set this up when being called from ui project.
+_idea here is not to lose back-ups, and understand working model with different branches_
+
+On a regular interval, these two branches are pushed/merged/synced with main, 
+and hence do not have much difference.
+
+This is also used to create small PoC
+1. how to use API versioning using CAP [link](https://sap-my.sharepoint.com/:v:/p/avinash_jha/EYPD7N2wenhEqNfjWfPcrBsBegc_1WN3xMS_uvrOH9ajtw?e=eKvtIb)
+2. how to set up configuration db, that is non transacional db where the db data is added as csv file
+
+### In-Progress
+
+1. Adding a Database connection
+
+- Create a db hdi container in BTP. 
+- Add the instance manager to above service in manifest or mta.yaml
+- deploy the service to BTP provider account
+
+2. Fix below authorization issue for local connection ui to backend app.
 
    <img width="999" alt="image" src="https://user-images.githubusercontent.com/48620270/235640961-a1114111-49e0-4a80-864b-b0494199d802.png">
-   
- - also tried deploying backend service to btp-trial account. here i am stuck at creating hana-db instance.
- - third option i have is not use bas, but locally in my machine, i run both my backend and front end project and see if that works
- 
- 
- 2. Other plan is ui5 project - i can work on o-data v4 changes by integrating northwind services and for backend services - i can work separately on health tracker-service
- 
+
+ ### Related UI5 project
+
+Sample [UI5 project](https://github.com/avinash610jha/health-tracker-ui) using northwind service as backend service.
+
 
 
