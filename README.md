@@ -10,7 +10,7 @@ Idea of these two extra branch is to safe guard the code, as i am still learning
 these two branch do not have much difference and has mainly impact on application yaml, so later on we will get rid of these two separate branch. maybe we can rename these branch as backup 1, backup 2 - local 
 
 Current Status
-1. I am stuck at connecting my front end code to backend code
+1. I am stuck at connecting my front end code to backend code due to authorization issue.
 - tried bas local to local connection, using ui5 tooliing, however it is failing at authorisation. Bas cap template backend service enables spring security because of which it requires an authentication. infact calling any rest endoint non-odata, it requires basic authentication. This is causing issue in connecting  app locally, as can be seen below a basic authentication is passed.
 - i have overwritten the security by providing my user and password but unable to set this up when being called from ui project.
 
